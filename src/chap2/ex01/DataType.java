@@ -19,6 +19,9 @@ public class DataType {
 		
 		char oo = 97;
 		char pp = '\u0061';
+		System.out.println(abc);
+		System.out.println(gg);
+		System.out.println(oo);
 		System.out.println(pp);
 		
 		
