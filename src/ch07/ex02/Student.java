@@ -3,7 +3,48 @@ package ch07.ex02;
 public class Student 
 {
 	//설계도
-	String name, addr; public String getName() {
+	String name, addr; 
+	
+	int num, kor, eng, math;
+	
+	Student(){}
+	
+	Student(String name)
+	{
+		this.name = name;
+	}
+	
+	Student(String name, String addr)
+	{
+		this.name = name; this.addr = addr;
+	}
+	
+	Student(int num)
+	{
+		this.num = num;
+	}
+	
+
+	Student(String name, String addr, int num)
+	{
+		this.name = name; this.addr = addr; this.num=num;
+	}
+	
+	Student(String name, int kor, int eng, int math)
+	{
+		this.name = name; this.kor = kor; this.eng=eng; this.math=math;
+	}
+	
+	public void sumAvg()
+	{
+		int sum = 0;
+		sum = kor+eng+math;
+		double avg = sum/3.0;
+		System.out.println(name + "의 점수 합계 : "+sum+", 평균 : "+avg);
+	}
+	
+	
+	public String getName() {
 		return name;
 	}
 
@@ -49,44 +90,6 @@ public class Student
 
 	public void setMath(int math) {
 		this.math = math;
-	}
-
-	int num, kor, eng, math;
-	
-	Student(){}
-	
-	Student(String name)
-	{
-		this.name = name;
-	}
-	
-	Student(String name, String addr)
-	{
-		this.name = name; this.addr = addr;
-	}
-	
-	Student(int num)
-	{
-		this.num = num;
-	}
-	
-
-	Student(String name, String addr, int num)
-	{
-		this.name = name; this.addr = addr; this.num=num;
-	}
-	
-	Student(String name, int kor, int eng, int math)
-	{
-		this.name = name; this.kor = kor; this.eng=eng; this.math=math;
-	}
-	
-	public void sumAvg()
-	{
-		int sum = 0;
-		sum = kor+eng+math;
-		double avg = sum/3.0;
-		System.out.println(name + "의 점수 합계 : "+sum+", 평균 : "+avg);
 	}
 	
 	@Override
